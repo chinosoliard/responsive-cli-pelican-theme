@@ -11,4 +11,4 @@ responsive-cli-theme is a [pelican](https://www.getpelican.com) theme based on [
 Screenshot
 ----------
 
-  ![Screenshot](screenshot.PNG)
+  ![Screenshot](screenshot.png)
