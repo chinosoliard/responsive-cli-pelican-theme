@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html>
+<html class="no-js" lang="{{ DEFAULT_LANG }}">
+	<head>
+		{% include 'head.html' %}
+	</head>
+	<body id="index" class="blog">
+		<div id="container" class="hfeed">
+
+			{% include 'header.html' %}    
+	
+			{% include 'menu.html' %}
+
+			<section id="wrapper" class="clearfix">
+
+				<section id="content" class="grid col-620" >
+					{% block content %}
+						{% block content_title %}
+						{% endblock %}
+						<section class="breadcrumbs-list">
+							{% block nav %}
+							{% endblock %}
+						</section>
+					{% endblock %}
+				</section><!-- #content -->
+
+				{% include 'widgets.html' %}
+	
+			</section><!-- /#wrapper -->
+
+		{% include 'footer.html' %}
+
+	</div>
+</body>
+</html>

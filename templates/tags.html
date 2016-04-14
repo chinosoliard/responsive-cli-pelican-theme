@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2 class="page_title"> Tags:</h2>
+<ul id="tag_list">
+{% for tag, articles in tags %}
+    <li><h3><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a></h3></li>
+{% endfor %}
+</ul>
+{% endblock %}
+

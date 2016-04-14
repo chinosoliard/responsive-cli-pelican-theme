@@ -1,0 +1,11 @@
+{% macro translations_for(object) %}
+Translations:
+{% if object.translations %}
+{% for translation in object.translations %}
+<a href="{{ SITEURL }}/{{ translation.url }}">{{ translation.lang }}</a>
+{% endfor %}
+{% else %}
+none
+{% endif %}
+{% endmacro %}
+

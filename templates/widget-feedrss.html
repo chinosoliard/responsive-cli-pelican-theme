@@ -1,0 +1,11 @@
+{% block social %}
+<div class="widget" id="suscribe">
+	<h2>Feed RSS</h2>
+	<ul>
+		<li><a href="{{ SITEURL }}/{{ FEED }}" rel="alternate">Flux ATOM</a></li>
+		{% if FEED_RSS %}
+		<li><a href="{{ SITEURL }}/{{ FEED_RS }}" rel="alternate">Flux RSS</a></li>
+		{% endif %}
+	</ul>
+</div>
+{% endblock %}

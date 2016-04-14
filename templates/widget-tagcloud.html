@@ -1,0 +1,12 @@
+{% block tagcloud %}
+<section id="widget-tagcloud" class="widget-wrapper widget_archive">
+	<div class="widget-title">
+		Tagcloud
+	</div>
+	<div>
+		{% for tag, size in tag_cloud %}
+		<span><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag.name }}</a></span>
+		{% endfor %}
+	</div>
+</section>
+{% endblock %}

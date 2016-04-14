@@ -1,0 +1,15 @@
+{% block widgets %}
+<section id="widgets" class="grid col-300 fit" >
+	{% include 'widget-image-1.html' %}
+
+	<!-- {% include 'widget-searchform.html' %} -->
+	{% if DISPLAY_CATEGORIES_ON_MENU != True %}
+	{% include 'widget-categories.html' %}
+	{% endif %}
+
+	{% include 'widget-tagcloud.html' %}
+ 
+	{% include 'widget-links.html' %}
+
+</section><!-- widgets -->
+{% endblock widgets %}

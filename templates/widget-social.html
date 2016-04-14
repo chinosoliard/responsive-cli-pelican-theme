@@ -1,0 +1,10 @@
+{% block social %}
+<div class="widget" id="social">
+	<h2>Social Networks</h2>
+	<ul>
+		{% for name, link in SOCIAL %}
+		<li><a href="{{ link }}"> {{ name }}</a></li>
+		{% endfor %}
+	</ul>
+</div>
+{% endblock %}

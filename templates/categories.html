@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{%block title %}{{ SITENAME }}" - Categories"{%endblock%}
+{% block content %}
+<h2 class="page_title"># Categories</h2>
+<h2>$ ls -1 category/</h2>
+	<table id="archives">
+		<tbody>
+		{% for category, articles in categories %}
+			<tr>
+				<td id="archives"><a href="{{ SITEURL }}/{{ category.url }}">{{ category }}</a></td>
+			</tr>
+		{% endfor %}
+		</tbody>
+	</table>
+{% endblock %}
+

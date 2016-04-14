@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+{{ super() }}
+<section id="post" class="post hentry">
+	<header>
+		<h2 class="post-title" >{{ article.title }}</h2>
+		{%include 'meta.html'%}
+	</header>
+	<div class="post-entry">
+		{{ article.summary }}
+        	{{ article.content }}
+	</div><!-- /.entry-content -->        
+</section>
+{% endblock %}
