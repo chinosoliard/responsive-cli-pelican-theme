@@ -2,18 +2,18 @@
 {% block title %}{{ SITENAME }} - «{{ tag }}»{% endblock %}
 
 {% block content %}
- <h2 class="page_title">Articles avec le mot-clé «{{ tag }}»</h2>
+ <h2 class="page_title">$ grep -r Tags: blog/ |grep {{ tag }}</h2>
  {% if articles %}
-  {% for article in articles %} 
-    <article class="post">
-      <h2 class="title"><a href="{{ SITEURL }}/{{ article.url}}">{{ article.title }}</a></h2>
-      {%include 'meta.html'%}
+        <table id="archives">
+                <tbody>
+                {% for article in articles %}
+                        <tr>
+                                <td id="archives"><a href="{{ SITEURL }}/{{ article.url}}">{{ article.url }}</a>:Tags: {% for tag in article.tags %}{%if loop.index > 1%} {%endif%}{{ tag }},{% endfor %} 
+                        </tr>
+                {% endfor %}
+                </tbody>
+        </table>
 
-      <section class="post_content">
-        {{ article.summary }}<br />
-        <a class="more" href="{{ SITEURL }}/{{ article.url }}">Lire la suite...</a>
-      </section>
-    </article>
-  {% endfor %}
  {% endif %}
 {% endblock %}
+
