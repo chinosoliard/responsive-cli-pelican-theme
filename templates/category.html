@@ -2,7 +2,7 @@
 {% block title %}{{ SITENAME }} - {{ category}}{% endblock %}
 
 {% block content %}
- <h2 class="page_title">$ grep -r Category: blog/ |grep {{ category }}</h2>
+ <h2 class="page_title">$ grep -r Category\ = blog/ |grep {{ category }}</h2>
  {% if articles %}
 	<table id="archives">
 		<tbody>

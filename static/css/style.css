@@ -980,6 +980,36 @@ li.posts {
     margin: 0;
 }
 
+ul.tagcloud {
+  list-style: none;
+    padding: 0;
+}
+
+ul.tagcloud li {
+    display: inline-block;
+}
+
+li.tag-1 {
+    font-size: 160%;
+}
+
+li.tag-2 {
+    font-size: 130%;
+}
+
+li.tag-3 {
+    font-size: 100%;
+}
+
+li.tag-4 {
+    font-size: 70%;
+}
+
+ul.tagcloud .list-group-item <span>.badge {
+    background-color: grey;
+    color: white;
+}
+
 /* =Titles
 -------------------------------------------------------------- */
 .featured-title {
