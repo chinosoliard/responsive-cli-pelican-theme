@@ -8,11 +8,11 @@
 	</header>
 	<div class="post-entry">
 		{{ article.summary }}
-		{% if article.publicidad %}
+		{% if article.adsense %}
 		{% include "adsense2.html" %}
 		{% endif %}
         	{{ article.content }}
-		{% if article.publicidad %}
+		{% if article.adsense %}
 		{% include "adsense3.html" %}
 		{% endif %}
 	</div><!-- /.entry-content -->        
