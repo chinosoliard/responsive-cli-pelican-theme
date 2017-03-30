@@ -26,7 +26,7 @@ You can use adsense with this template (in the posts you want). For this you mus
     Tags: Pelican, Theme
     Lang: en
     Slug: my-title
-    **adsense: 1**
+    adsense: 1		<---
 
   2. Add your adsense codes, editting templates/adsense\*.html.  
 **NOTE:** if you don't edit *adsense\*.html* files, you probably use my codes, and give me your income :-P. If you think that 3 ads are many, you can save "empty" files.
