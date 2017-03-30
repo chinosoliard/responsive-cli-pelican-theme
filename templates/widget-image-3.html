@@ -1,0 +1,10 @@
+{% if IMAGE3 %}
+<section id="widget-image-3" class="widget-image">
+	<div class="widget" id="widget">
+		{% if LINK3 %}
+		<a href="{{ LINK3 }}" target="_blank"{% if LINK3TITLE %} alt="{{ LINK3TITLE }}"{% endif %}>{% endif %}
+		<img src="{{ SITEURL }}/{{ IMAGE3 }}">
+		{% if LINK3 %}</a>{% endif %}
+	</div>
+</section>
+{% endif %}
