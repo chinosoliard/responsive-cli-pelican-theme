@@ -4,9 +4,9 @@
 	{% if DISPLAY_CATEGORIES_ON_MENU != False %}
 	<a {% if page_name == 'categories' %}class="active" {% endif %}href="{{ SITEURL }}/categories.html">$ ./CategoriesList</a>
 	{% endif %}	
-	{% if DISPLAY_PAGES_ON_MENU != False%}
-	{% for p in PAGES %}
-	<a {% if p == page %}class="active" {% endif %}href="{{ SITEURL }}/{{ p.url }}">$ ./pages/{{ p.title }}</a>
+	{% if DISPLAY_PAGES_ON_MENU != False %}
+	{% for p in pages %}
+	<a {% if p == page %}class="active" {% endif %} href="{{ SITEURL }}/{{ p.url }}">$ ./pages/{{ p.title }}</a>
 	{% endfor %}
 	{% endif %}	
 </nav> <!-- /#nav -->
