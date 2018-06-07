@@ -2,13 +2,12 @@
 {%block title %}{{ SITENAME }}" - Blog History"{%endblock%}
 {% block content %}
 <h2 class="page_title"># Blog history</h2>
-<h2>$ stat -c "%y %n" blog/*</h2>
+<h2>$ stat -c "%y %n" blog/*/*/* | tac</h2>
   <table id="archives" >
     <tbody>
   {% for article in dates %}
 	<tr>
-	<td id="archives"><strong>{{ article.date|strftime('%Y-%m-%d %H:%M') }}</strong>{{ article.date|strftime(':%S') }}.000000000 -0300</td>
-        <td id="archives"><a href='{{ article.url }}'>{{ article.title }}</a> </td>
+		<td id="archives"><strong>{{ article.date|strftime('%Y-%m-%d') }}</strong> {{ article.date|strftime('%H:%M') }} {{ article.date|strftime(':%S') }}.000000000 -0300 blog/{{article.date|strftime('%Y')}}/{{article.date|strftime('%m')}}/</br><a href='{{ article.url }}'><strong>{{ article.title }}</strong></a></td>
       </tr>
   {% endfor %}
     </tbody>
